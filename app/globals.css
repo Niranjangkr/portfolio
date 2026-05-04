@@ -1,26 +1,317 @@
+/* ─── Google Fonts ───────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
 @import "tailwindcss";
 
+/* ─── Tailwind v4: class-based dark mode ─────────────────────────────────── */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ─── Design tokens ──────────────────────────────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fbf9f7;
+  --foreground: #1a1a1a;
+  --foreground-muted: #525252;
+  --border: rgba(0, 0, 0, 0.08);
+  --card-bg: rgba(255, 255, 255, 0.6);
+  --accent: #3d8b5e;
+  --accent-light: rgba(61, 139, 94, 0.15);
+  --navbar-bg: rgba(255, 255, 255, 0.85);
+  --navbar-border: rgba(0, 0, 0, 0.08);
+  --pill-border: rgba(0, 0, 0, 0.1);
+  --pill-hover: rgba(0, 0, 0, 0.04);
+  --badge-bg: rgba(61, 139, 94, 0.12);
 }
 
+.dark {
+  --background: #111111;
+  --foreground: #ededed;
+  --foreground-muted: #9ca3af;
+  --border: rgba(255, 255, 255, 0.1);
+  --card-bg: rgba(255, 255, 255, 0.04);
+  --accent: #4ade80;
+  --accent-light: rgba(74, 222, 128, 0.15);
+  --navbar-bg: rgba(17, 17, 17, 0.85);
+  --navbar-border: rgba(255, 255, 255, 0.08);
+  --pill-border: rgba(255, 255, 255, 0.12);
+  --pill-hover: rgba(255, 255, 255, 0.04);
+  --badge-bg: rgba(74, 222, 128, 0.12);
+}
+
+/* ─── Tailwind theme mapping ─────────────────────────────────────────────── */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-muted: var(--foreground-muted);
+  --color-border: var(--border);
+  --color-card: var(--card-bg);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+  --font-signature: 'Dancing Script', cursive;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ─── Base styles ────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  transition: background-color 0.2s ease, color 0.2s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── View Transitions — radial circle wipe from toggle button ───────────── */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+/* Dark → Light: old (dark) fades out normally */
+.dark::view-transition-old(root) {
+  z-index: 1;
+}
+
+/* Light → Dark: new (dark) expands as a circle from the button */
+::view-transition-new(root) {
+  z-index: 9999;
+  animation: theme-circle-reveal 550ms cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+@keyframes theme-circle-reveal {
+  from {
+    clip-path: circle(0% at var(--vt-x, 50%) var(--vt-y, 50%));
+  }
+  to {
+    clip-path: circle(170% at var(--vt-x, 50%) var(--vt-y, 50%));
+  }
+}
+
+/* ─── Signature font ─────────────────────────────────────────────────────── */
+.signature-text {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  font-style: normal;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  color: var(--foreground);
+  opacity: 0.8;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.signature-container {
+  display: inline-flex;
+  position: relative;
+}
+
+.signature-mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background: var(--background);
+  animation: signatureReveal 1.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation-delay: 0.8s;
+  transform-origin: right;
+  border-left: 2px solid var(--accent); /* the 'pen' */
+}
+
+@keyframes signatureReveal {
+  0% { width: 100%; border-left-color: var(--accent); }
+  90% { width: 0%; border-left-color: var(--accent); }
+  100% { width: 0%; border-left-color: transparent; }
+}
+
+/* ─── Green underline links ──────────────────────────────────────────────── */
+.green-link {
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 3px;
+  color: inherit;
+  transition: color 0.15s ease;
+}
+
+.green-link:hover {
+  color: var(--accent);
+}
+
+/* "cool" word underline */
+.cool-underline {
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  font-weight: inherit;
+}
+
+/* ─── Section label (left border + small caps) ───────────────────────────── */
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-left: 2px solid var(--accent);
+  padding-left: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--foreground-muted);
+  margin-bottom: 1.25rem;
+}
+
+/* ─── Pill button (contact row) ──────────────────────────────────────────── */
+.pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 1rem;
+  border-radius: 9999px;
+  border: 1px solid var(--pill-border);
+  background: transparent;
+  color: var(--foreground);
+  font-size: 0.875rem;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.pill-btn:hover {
+  background-color: var(--pill-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.dark .pill-btn:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* ─── Type badge (site/bot/pkg/repo) ─────────────────────────────────────── */
+.type-badge {
+  display: inline-block;
+  padding: 0.1rem 0.45rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  background-color: var(--pill-hover);
+  color: var(--foreground-muted);
+  border: 1px solid var(--pill-border);
+}
+
+/* ─── Green remote badge ─────────────────────────────────────────────────── */
+.remote-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 9999px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--accent);
+  background-color: var(--badge-bg);
+  border: 1px solid currentColor;
+}
+
+/* ─── Now Playing card ───────────────────────────────────────────────────── */
+.now-playing-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.album-art {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.4rem;
+  background: var(--pill-hover);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* ─── Timeline (experience) ──────────────────────────────────────────────── */
+.timeline-container {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: 1px;
+  border-left: 1px dashed var(--border);
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -4px;
+  top: 0.75rem;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--background);
+  border: 2px solid var(--foreground-muted);
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.timeline-dot.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-light);
+}
+
+.timeline-item:hover .timeline-dot:not(.active) {
+  border-color: var(--accent);
+  transform: scale(1.2);
+}
+
+/* ─── Dashed separator ───────────────────────────────────────────────────── */
+.dashed-sep {
+  border: none;
+  border-top: 1px dashed var(--border);
+  margin: 1.75rem 0;
+}
+
+/* ─── Footer ─────────────────────────────────────────────────────────────── */
+.footer-sep {
+  border: none;
+  border-top: 1px dotted var(--border);
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
 }
