@@ -101,12 +101,6 @@ export default function ExperiencePage() {
         </div>
       </div>
 
-      {/* ── Footer ───────────────────────────────────────────────────────── */}
-      <footer className="mt-24 pt-8 border-t border-dashed border-border">
-        <p className="text-center text-xs font-medium text-muted">
-          © {siteContent.footer.year} {siteContent.footer.name}
-        </p>
-      </footer>
     </div>
   );
 }

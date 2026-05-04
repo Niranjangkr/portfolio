@@ -10,7 +10,7 @@ export default function Signature({ name }: { name: string }) {
   }, []);
 
   return (
-    <div className="signature-container" aria-label={name}>
+    <div className="signature-container overflow-hidden px-8 py-4 -mx-8 -my-4" aria-label={name}>
       <span className="signature-text">{name}</span>
       {/* The mask simulates the drawing effect */}
       {mounted && <div className="signature-mask" />}

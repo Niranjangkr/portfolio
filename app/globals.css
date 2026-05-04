@@ -117,20 +117,19 @@ body {
 .signature-mask {
   position: absolute;
   top: 0;
-  right: 0;
   bottom: 0;
+  right: 0;
   width: 100%;
   background: var(--background);
   animation: signatureReveal 1.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   animation-delay: 0.8s;
   transform-origin: right;
-  border-left: 2px solid var(--accent); /* the 'pen' */
+  z-index: 2;
 }
 
 @keyframes signatureReveal {
-  0% { width: 100%; border-left-color: var(--accent); }
-  90% { width: 0%; border-left-color: var(--accent); }
-  100% { width: 0%; border-left-color: transparent; }
+  0% { width: 100%; }
+  100% { width: 0%; }
 }
 
 /* ─── Green underline links ──────────────────────────────────────────────── */

@@ -45,6 +45,8 @@ export const metadata: Metadata = {
   },
 };
 
+import Footer from "@/components/Footer";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -59,11 +61,12 @@ export default function RootLayout({
       <head>
         <ThemeScript />
       </head>
-      <body className="min-h-screen antialiased">
+      <body className="min-h-screen antialiased flex flex-col">
         <Navbar />
-        <main className="pt-20 pb-8">
+        <main className="flex-1 pt-20">
           <PageTransition>{children}</PageTransition>
         </main>
+        <Footer />
       </body>
     </html>
   );

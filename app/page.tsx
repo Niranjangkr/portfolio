@@ -115,16 +115,6 @@ export default function Home() {
         </p>
       </section>
 
-      {/* ── Footer ───────────────────────────────────────────────────────── */}
-      <footer className="pt-6">
-        <hr className="footer-sep mb-6" />
-        <p
-          className="text-center text-xs"
-          style={{ color: "var(--foreground-muted)" }}
-        >
-          © {footer.year} {footer.name}
-        </p>
-      </footer>
     </div>
   );
 }
