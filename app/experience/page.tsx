@@ -41,7 +41,7 @@ export default function ExperiencePage() {
                 <div className={`timeline-dot ${isCurrent ? "active" : ""}`} />
 
                 {/* Content */}
-                <div className="space-y-3">
+                <div className="space-y-2">
                   <div className="space-y-1">
                     <div className="flex items-center gap-2 flex-wrap">
                       {job.companyHref ? (
@@ -49,12 +49,12 @@ export default function ExperiencePage() {
                           href={job.companyHref}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="font-bold text-lg hover:text-accent transition-colors duration-200"
+                          className="font-bold text-lg hover:text-accent transition-colors duration-200 underline decoration-border underline-offset-4 hover:decoration-accent"
                         >
                           {job.company}
                         </a>
                       ) : (
-                        <span className="font-bold text-lg">{job.company}</span>
+                        <span className="font-bold text-lg underline decoration-border underline-offset-4">{job.company}</span>
                       )}
                       
                       {isCurrent && (
@@ -64,33 +64,32 @@ export default function ExperiencePage() {
                       )}
                     </div>
                     
-                    <p className="text-sm font-semibold text-foreground/80">{job.role}</p>
+                    <p className="text-sm font-semibold text-foreground/70">{job.role}</p>
                   </div>
 
                   <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs font-medium text-muted">
                     <span className="flex items-center gap-1.5">
-                      <Calendar size={12} strokeWidth={2.5} className="text-accent/60" />
                       {job.period}
                     </span>
                     <span className="flex items-center gap-1.5">
-                      <MapPin size={12} strokeWidth={2.5} className="text-accent/60" />
+                      <MapPin size={12} strokeWidth={2} className="text-muted/60" />
                       {job.location}
                     </span>
                     {job.remote && (
                       <span className="remote-badge bg-accent/5 border-accent/20">
-                        <Wifi size={11} strokeWidth={2.5} />
+                        <Wifi size={11} strokeWidth={2} />
                         Remote
                       </span>
                     )}
                   </div>
 
-                  <ul className="space-y-3 pt-1">
+                  <ul className="space-y-2 pt-1">
                     {job.bullets.map((bullet, bIdx) => (
                       <li
                         key={bIdx}
-                        className="text-[13px] leading-relaxed text-muted flex gap-3"
+                        className="text-[13px] leading-relaxed text-foreground/60 flex gap-3"
                       >
-                        <span className="mt-2 w-1 h-1 rounded-full bg-accent/40 flex-shrink-0" />
+                        <span className="mt-2 w-1 h-1 rounded-full bg-border flex-shrink-0" />
                         <span>{bullet}</span>
                       </li>
                     ))}

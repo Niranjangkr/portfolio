@@ -253,35 +253,41 @@ body {
 /* ─── Timeline (experience) ──────────────────────────────────────────────── */
 .timeline-container {
   position: relative;
+}
+
+.timeline-item {
+  position: relative;
   padding-left: 2rem;
 }
 
 .timeline-line {
   position: absolute;
   left: 0;
-  top: 0.5rem;
-  bottom: 0.5rem;
+  top: 0;
+  bottom: 0;
   width: 1px;
   border-left: 1px dashed var(--border);
+  opacity: 0.8;
 }
 
 .timeline-dot {
   position: absolute;
-  left: -4px;
-  top: 0.75rem;
-  width: 9px;
-  height: 9px;
+  left: -4.5px; /* Centered on the 1px line at left: 0 */
+  top: 0.75rem; /* Aligns with the center of the first line of text */
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background: var(--background);
-  border: 2px solid var(--foreground-muted);
+  border: 1.5px solid var(--border);
   z-index: 1;
   transition: all 0.3s ease;
 }
 
 .timeline-dot.active {
-  background: var(--accent);
+  background: var(--background);
   border-color: var(--accent);
-  box-shadow: 0 0 0 4px var(--accent-light);
+  border-width: 2px;
+  box-shadow: 0 0 0 3px var(--accent-light);
 }
 
 .timeline-item:hover .timeline-dot:not(.active) {
