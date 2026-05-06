@@ -83,10 +83,18 @@ export const siteContent: SiteContent = {
       {
         segments: [
           {
-            text: "I like making things for the web. TypeScript is my main thing. Most of my time goes into shipping full-stack apps, integrating AI pipelines, and occasionally wrangling AWS infrastructure (I fix it tho). Currently building at ",
+            text: "I'm a full-stack engineer focused on building scalable SaaS products, AI-powered workflows, and data-intensive platforms. My work spans frontend systems, backend architecture, analytics pipelines, and cloud infrastructure — usually shipping products end-to-end from idea to production.",
           },
-          { text: "CubikTech", href: "https://cubiktech.in" },
-          { text: "." },
+          {
+            text: "Currently building at ",
+          },
+          {
+            text: "CubikTech",
+            href: "https://cubiktech.com",
+          },
+          {
+            text: ", where I work on fintech platforms, receivables systems, inventory analytics, and automation products integrating services like Stripe, Salesforce, idspay, Zoho, and OpenAI.",
+          },
         ],
       },
       {
@@ -94,19 +102,19 @@ export const siteContent: SiteContent = {
           {
             text: "Outside of code, I'm usually ",
           },
-          { text: "thinking", href: "https://x.com" },
+          { text: "thinking", href: "https://x.com/NiranjanGaonka7" },
           {
             text: " about random stuff that somehow always ends up as a side project, or getting ",
           },
-          { text: "lost", href: "https://github.com/niranjansgitbuh" },
+          { text: "lost", href: "https://github.com/Niranjangkr" },
           {
             text: " in a rabbit hole. Big fan of story-driven ",
           },
-          { text: "games", href: "#" },
+          { text: "games", href: "https://store.steampowered.com/app/13600/Prince_of_Persia_The_Sands_of_Time/" },
           {
             text: " and always has music ",
           },
-          { text: "playing", href: "#" },
+          { text: "playing", href: "https://open.spotify.com/playlist/02uOQLQYKlV3IhSysjX8HP#" },
           {
             text: " in the background. Currently based in Goa, India.",
           },
@@ -118,27 +126,22 @@ export const siteContent: SiteContent = {
   links: [
     {
       label: "Email",
-      href: "mailto:niranjangaonkar@example.com",
+      href: "mailto:niranjangaonkar.09@gmail.com",
       icon: "Mail",
     },
     {
       label: "LinkedIn",
-      href: "https://www.linkedin.com/in/niranjangaonkar",
+      href: "https://www.linkedin.com/in/niranjan-gaonkar/",
       icon: "Linkedin",
     },
     {
       label: "GitHub",
-      href: "https://github.com/niranjansgitbuh",
+      href: "https://github.com/Niranjangkr",
       icon: "Github",
     },
     {
-      label: "Meeting",
-      href: "https://cal.com/niranjan",
-      icon: "Calendar",
-    },
-    {
       label: "WhatsApp",
-      href: "https://wa.me/91XXXXXXXXXX",
+      href: "https://wa.me/919673558251",
       icon: "MessageCircle",
     },
   ],
@@ -146,40 +149,42 @@ export const siteContent: SiteContent = {
   experience: [
     {
       company: "CubikTech",
-      companyHref: "https://cubiktech.in",
+      companyHref: "https://cubiktech.com",
       role: "Software Engineer",
       period: "Jan 2025 – Present",
       location: "Bicholim, Goa, India",
       remote: true,
       bullets: [
-        "Led full-stack development and AWS deployment of a GST services platform, architecting scalable backend APIs (Node.js, PostgreSQL) with Razorpay payment integration and secure JWT-based authentication.",
-        "Built a multi-tenant analytics platform integrating Salesforce data for pipeline forecasting and revenue insights, designing modular backend services with RBAC and automated sync pipelines using cron jobs.",
-        "Owned frontend architecture for an AI-driven receivables platform using Next.js — implemented high-performance data tables (TanStack Table) and a visual workflow builder (XYFlow), with AWS Cognito MFA auth.",
-        "Developed an AI-powered analytics system for Blinkit, Instamart, and Zepto integrations with ingestion pipelines (CSV/Excel), deduplication, batch upserts to Supabase, and conversational analytics via Azure OpenAI and Pinecone.",
-        "Engineered multiple full-stack SaaS platforms with AI-driven analytics, vector search, and workflow automation that significantly reduced manual processing time.",
+        "Led end-to-end development of multiple fintech, analytics, and automation platforms across frontend, backend, infrastructure, and deployment layers using Next.js, FastAPI, PostgreSQL, AWS, and Railway.",
+        "Architected scalable multi-tenant systems integrating Stripe, Razorpay, Salesforce, Zoho, Experian, Azure OpenAI, and Pinecone for payments, analytics, workflow automation, and credit decisioning.",
+        "Built AI-powered analytics platforms with ingestion pipelines for CSV/Excel data, vector search, conversational querying, and real-time dashboards for inventory and receivables workflows.",
+        "Designed production-ready frontend systems with Next.js App Router, React Query, Redux Toolkit, and React Flow while implementing secure auth flows using AWS Cognito with MFA.",
       ],
     },
     {
       company: "xAGI",
+      companyHref: "https://xagi.in/",
       role: "Software Engineer",
       period: "Sep 2023 – Jan 2025",
       location: "Remote",
       remote: true,
       bullets: [
-        "Advanced AI technology through full-stack development, building products that showcase front-end refinement and back-end power.",
-        "Contributed to AI-driven product features, combining React/Next.js front-ends with robust backend services.",
-        "Collaborated on cross-functional teams to ship production-quality software in fast-paced, research-driven environment.",
+        "Built AI-driven web applications using Next.js, Node.js, and MongoDB, delivering full-stack product features across frontend systems, backend APIs, and database architecture.",
+        "Developed AI chatbots, PDF interaction systems, and retrieval-based workflows using LLM integrations for contextual search and conversational interfaces.",
+        "Engineered modular APIs and automation pipelines supporting dynamic content generation, workflow orchestration, and scalable user-centric platforms.",
+        "Designed admin dashboards and analytics systems for monitoring users, platform activity, AI workflows, and operational insights.",
       ],
     },
     {
       company: "WeframeTech",
+      companyHref: "https://weframetech.com/",
       role: "Full-stack Developer Intern",
       period: "Jul 2023 – Aug 2023",
       location: "Remote",
       remote: true,
       bullets: [
-        "Built and shipped features using Next.js and Tailwind CSS during a focused 2-month internship.",
-        "Gained hands-on experience with modern frontend tooling and production deployment workflows.",
+        "Developed responsive UI components and dashboards using React and Chart.js for internal analytics workflows.",
+        "Implemented Zustand-based state management and contributed to frontend architecture improvements during a fast-paced startup internship.",
       ],
     },
   ],
@@ -189,69 +194,85 @@ export const siteContent: SiteContent = {
       {
         name: "Agile Receivables",
         type: "site",
-        date: "March 2025",
+        date: "2025",
         description:
-          "AI-driven receivables management platform with visual workflow builder, high-performance data tables, and MFA-based authentication. Built for enterprise AR operations.",
-        techIcons: ["⚛️", "🟦", "🗄️", "☁️", "🤖"],
-        href: "#",
+          "Enterprise receivables automation platform with AI-driven workflows, visual campaign orchestration, MFA-secured authentication, and large-scale analytics dashboards built using Next.js, React Flow, and AWS services.",
+        techIcons: ["⚛️", "🟦", "☁️", "📊", "🤖"],
+        href: "https://agilereceivables.com",
       },
       {
         name: "GST Manager",
         type: "site",
-        date: "January 2025",
+        date: "2025",
         description:
-          "End-to-end SaaS platform for GST services with scalable backend APIs, Razorpay payment integration, webhook-based transaction handling, and cross-platform frontend.",
+          "Full-stack GST services platform with Razorpay payments, Zoho automations, RBAC workflows, and scalable backend systems for compliance tracking and service lifecycle management.",
         techIcons: ["⚛️", "🟩", "🐘", "💳", "☁️"],
+        href: "https://gstmanager.com",
+      },
+      {
+        name: "Kreditfin",
+        type: "site",
+        date: "2025",
+        description:
+          "Credit underwriting and decisioning platform integrating Experian APIs, automated scoring workflows, financial analysis pipelines, and FastAPI-based backend systems for loan processing.",
+        techIcons: ["🐍", "⚡", "🐘", "📈", "💰"],
+        href: "https://kreditfin-frontend.vercel.app/",
+      },
+      {
+        name: "Workweek Analytics",
+        type: "site",
+        date: "2024",
+        description:
+          "Sales and revenue analytics platform integrating Salesforce data with real-time dashboards, forecasting systems, SOQL-powered querying, RBAC, and multi-tenant backend architecture.",
+        techIcons: ["⚛️", "🟩", "📊", "☁️", "🔄"],
         href: "#",
       },
       {
-        name: "Workweek",
+        name: "Startup Nalanda",
         type: "site",
-        date: "November 2024",
+        date: "2024",
         description:
-          "Multi-tenant revenue & sales intelligence platform integrating Salesforce data for pipeline forecasting with RBAC, automated sync pipelines, and modular backend services.",
-        techIcons: ["⚛️", "🟩", "🐘", "🔄", "📊"],
-        href: "#",
-      },
-      {
-        name: "AI Analytics System",
-        type: "site",
-        date: "September 2024",
-        description:
-          "Conversational analytics system for quick commerce (Blinkit, Instamart, Zepto) with CSV/Excel ingestion pipelines, vector search via Pinecone, and Azure OpenAI integration.",
-        techIcons: ["⚛️", "🟦", "🤖", "🔍", "🗃️"],
-        href: "#",
+          "AI-powered learning platform generating structured courses, quizzes, and learning resources dynamically using LLM pipelines, Supabase, and scalable full-stack workflows.",
+        techIcons: ["⚛️", "🤖", "📚", "☁️", "🧠"],
+        href: "https://startupnalanda.com/",
       },
     ],
+
     other: [
       {
-        name: "Portfolio v1",
+        name: "Favcy Navigator",
         type: "site",
-        date: "April 2024",
+        date: "2024",
         href: "#",
       },
       {
-        name: "Discord Bot Framework",
-        type: "bot",
-        date: "June 2023",
+        name: "WishFerry",
+        type: "site",
+        date: "2024",
+        href: "https://wishferry.vercel.app",
+      },
+      {
+        name: "PitchPerfectAI",
+        type: "site",
+        date: "2024",
         href: "#",
       },
       {
-        name: "React Component Library",
-        type: "pkg",
-        date: "March 2023",
-        href: "#",
+        name: "FavcyHive: AI Workplace Assistant",
+        type: "site",
+        date: "2024",
+        href: "https://favcyhive.vercel.app/",
       },
       {
-        name: "CLI Toolbox",
-        type: "repo",
-        date: "January 2023",
-        href: "#",
+        name: "Receivables & Inventory Analytics",
+        type: "site",
+        date: "2025",
+        href: "https://inventory.cubiktech.com",
       },
       {
-        name: "Next.js Boilerplate",
-        type: "repo",
-        date: "October 2022",
+        name: "Clappety",
+        type: "site",
+        date: "2024",
         href: "#",
       },
     ],
@@ -260,16 +281,14 @@ export const siteContent: SiteContent = {
   contact: {
     segments: [
       { text: "Wanna chat? Hit me up on " },
-      { text: "WhatsApp", href: "https://wa.me/91XXXXXXXXXX" },
+      { text: "WhatsApp", href: "https://wa.me/919673558251" },
       { text: " or " },
-      { text: "LinkedIn", href: "https://www.linkedin.com/in/niranjangaonkar" },
+      { text: "LinkedIn", href: "https://www.linkedin.com/in/niranjan-gaonkar/" },
       {
         text: ". You could also go the formal route with ",
       },
-      { text: "email", href: "mailto:niranjangaonkar@example.com" },
-      { text: " or " },
-      { text: "schedule a meeting", href: "https://cal.com/niranjan" },
-      { text: " if that's more your style." },
+      { text: "email", href: "mailto:niranjangaonkar.09@gmail.com" },
+
     ],
     nowPlaying: {
       track: "Blinding Lights",
