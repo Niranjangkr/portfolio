@@ -194,7 +194,7 @@ export const siteContent: SiteContent = {
       {
         name: "Agile Receivables",
         type: "site",
-        date: "2025",
+        date: "2025 – Present",
         description:
           "Enterprise receivables automation platform with AI-driven workflows, visual campaign orchestration, MFA-secured authentication, and large-scale analytics dashboards built using Next.js, React Flow, and AWS services.",
         techIcons: ["React", "Typescript", "Cloud", "Analytics", "AI"],

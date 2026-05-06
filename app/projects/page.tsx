@@ -39,7 +39,7 @@ const techIconMap: Record<string, { icon: any; color: string }> = {
 
 export const metadata = {
   title: "Projects — Niranjan Gaonkar",
-  description: "Things I've built, shipped, and sometimes abandoned.",
+  description: "Things I've built, shipped.",
 };
 
 const typeColors: Record<string, string> = {
@@ -71,7 +71,7 @@ export default function ProjectsPage() {
         className="text-sm mb-12"
         style={{ color: "var(--foreground-muted)" }}
       >
-        Things I&apos;ve built, shipped, and sometimes abandoned.
+        Things I&apos;ve built and shipped.
       </p>
 
       {/* ── Featured ─────────────────────────────────────────────────────── */}
