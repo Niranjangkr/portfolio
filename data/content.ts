@@ -12,7 +12,7 @@ export interface AboutParagraph {
 export interface ContactLink {
   label: string;
   href: string;
-  icon: string; // lucide-react icon component name
+  icon: string; // hugeicons icon component name
 }
 
 export interface Experience {
@@ -30,7 +30,7 @@ export interface FeaturedProject {
   type: "site" | "bot" | "pkg" | "repo";
   date: string;
   description: string;
-  techIcons: string[]; // emoji or label for now
+  techIcons: string[]; // mapped to Hugeicons in projects page
   href: string;
 }
 
@@ -197,7 +197,7 @@ export const siteContent: SiteContent = {
         date: "2025",
         description:
           "Enterprise receivables automation platform with AI-driven workflows, visual campaign orchestration, MFA-secured authentication, and large-scale analytics dashboards built using Next.js, React Flow, and AWS services.",
-        techIcons: ["⚛️", "🟦", "☁️", "📊", "🤖"],
+        techIcons: ["React", "Typescript", "Cloud", "Analytics", "AI"],
         href: "https://agilereceivables.com",
       },
       {
@@ -206,7 +206,7 @@ export const siteContent: SiteContent = {
         date: "2025",
         description:
           "Full-stack GST services platform with Razorpay payments, Zoho automations, RBAC workflows, and scalable backend systems for compliance tracking and service lifecycle management.",
-        techIcons: ["⚛️", "🟩", "🐘", "💳", "☁️"],
+        techIcons: ["React", "Nodejs", "Database", "Payments", "Cloud"],
         href: "https://gstmanager.com",
       },
       {
@@ -215,7 +215,7 @@ export const siteContent: SiteContent = {
         date: "2025",
         description:
           "Credit underwriting and decisioning platform integrating Experian APIs, automated scoring workflows, financial analysis pipelines, and FastAPI-based backend systems for loan processing.",
-        techIcons: ["🐍", "⚡", "🐘", "📈", "💰"],
+        techIcons: ["Python", "FastAPI", "Database", "Finance", "Money"],
         href: "https://kreditfin-frontend.vercel.app/",
       },
       {
@@ -224,7 +224,7 @@ export const siteContent: SiteContent = {
         date: "2024",
         description:
           "Sales and revenue analytics platform integrating Salesforce data with real-time dashboards, forecasting systems, SOQL-powered querying, RBAC, and multi-tenant backend architecture.",
-        techIcons: ["⚛️", "🟩", "📊", "☁️", "🔄"],
+        techIcons: ["React", "Nodejs", "Analytics", "Cloud", "Sync"],
         href: "#",
       },
       {
@@ -233,7 +233,7 @@ export const siteContent: SiteContent = {
         date: "2024",
         description:
           "AI-powered learning platform generating structured courses, quizzes, and learning resources dynamically using LLM pipelines, Supabase, and scalable full-stack workflows.",
-        techIcons: ["⚛️", "🤖", "📚", "☁️", "🧠"],
+        techIcons: ["React", "AI", "Learning", "Cloud", "Brain"],
         href: "https://startupnalanda.com/",
       },
     ],

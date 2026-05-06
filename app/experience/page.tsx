@@ -1,4 +1,5 @@
-import { Download, MapPin, Wifi, Calendar } from "lucide-react";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { Download01Icon, Location01Icon, Wifi01Icon } from "@hugeicons/core-free-icons";
 import { siteContent } from "@/data/content";
 
 export const metadata = {
@@ -22,7 +23,7 @@ export default function ExperiencePage() {
           download
           className="pill-btn text-xs mb-1"
         >
-          <Download size={13} strokeWidth={2} />
+          <HugeiconsIcon icon={Download01Icon} size={13} strokeWidth={2} />
           <span>Resume</span>
         </a>
       </div>
@@ -72,12 +73,12 @@ export default function ExperiencePage() {
                       {job.period}
                     </span>
                     <span className="flex items-center gap-1.5">
-                      <MapPin size={12} strokeWidth={2} className="text-muted/60" />
+                      <HugeiconsIcon icon={Location01Icon} size={12} strokeWidth={2} className="text-muted/60" />
                       {job.location}
                     </span>
                     {job.remote && (
                       <span className="remote-badge bg-accent/5 border-accent/20">
-                        <Wifi size={11} strokeWidth={2} />
+                        <HugeiconsIcon icon={Wifi01Icon} size={11} strokeWidth={2} />
                         Remote
                       </span>
                     )}

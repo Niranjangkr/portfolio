@@ -1,22 +1,23 @@
+import { HugeiconsIcon } from "@hugeicons/react";
 import {
-  Mail,
-  Link2,
-  GitBranch,
-  Calendar,
-  MessageCircle,
-} from "lucide-react";
+  Mail01Icon,
+  Linkedin01Icon,
+  Github01Icon,
+  Calendar01Icon,
+  Message01Icon,
+} from "@hugeicons/core-free-icons";
 import SectionLabel from "@/components/SectionLabel";
 import Signature from "@/components/Signature";
 import { siteContent } from "@/data/content";
 import type { AboutSegment } from "@/data/content";
 
-// Map icon string names to lucide components
-const iconMap: Record<string, React.ComponentType<{ size?: number; strokeWidth?: number }>> = {
-  Mail,
-  Linkedin: Link2,
-  Github: GitBranch,
-  Calendar,
-  MessageCircle,
+// Map icon string names to hugeicon components
+const iconMap: Record<string, any> = {
+  Mail: Mail01Icon,
+  Linkedin: Linkedin01Icon,
+  Github: Github01Icon,
+  Calendar: Calendar01Icon,
+  MessageCircle: Message01Icon,
 };
 
 function RichText({ segments }: { segments: AboutSegment[] }) {
@@ -75,7 +76,7 @@ export default function Home() {
                 target={link.href.startsWith("mailto") ? undefined : "_blank"}
                 rel="noopener noreferrer"
               >
-                {Icon && <Icon size={14} strokeWidth={1.8} />}
+                {Icon && <HugeiconsIcon icon={Icon} size={14} strokeWidth={1.8} />}
                 <span className="hidden sm:inline">{link.label}</span>
               </a>
             );

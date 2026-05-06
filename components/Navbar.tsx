@@ -2,14 +2,15 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Moon, Sun, Briefcase, Code, User, ArrowUp } from "lucide-react";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { Moon02Icon, Sun01Icon, Briefcase01Icon, CodeIcon, UserIcon, ArrowUp01Icon } from "@hugeicons/core-free-icons";
 import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const NAV_ITEMS = [
-  { href: "/", label: "Me", icon: User },
-  { href: "/experience", label: "Experience", icon: Briefcase },
-  { href: "/projects", label: "Projects", icon: Code },
+  { href: "/", label: "Me", icon: UserIcon },
+  { href: "/experience", label: "Experience", icon: Briefcase01Icon },
+  { href: "/projects", label: "Projects", icon: CodeIcon },
 ];
 
 export default function Navbar() {
@@ -71,7 +72,7 @@ export default function Navbar() {
   if (!mounted) return null;
 
   // When scrolled, only show Home and the current Active link
-  const visibleItems = scrolled 
+  const visibleItems = scrolled
     ? NAV_ITEMS.filter(item => item.href === "/" || pathname === item.href)
     : NAV_ITEMS;
 
@@ -89,7 +90,7 @@ export default function Navbar() {
             {visibleItems.map((item) => {
               const isActive = pathname === item.href;
               const Icon = item.icon;
-              
+
               return (
                 <motion.div
                   key={item.href}
@@ -101,15 +102,14 @@ export default function Navbar() {
                 >
                   <Link
                     href={item.href}
-                    className={`relative px-3 py-2 text-sm font-medium rounded-xl transition-all duration-200 group flex items-center gap-2 ${
-                      isActive 
-                        ? "text-foreground bg-accent/5 dark:bg-accent/10" 
-                        : "text-muted hover:text-foreground hover:bg-pill-hover"
-                    }`}
+                    className={`relative px-3 py-2 text-sm font-medium rounded-xl transition-all duration-200 group flex items-center gap-2 ${isActive
+                      ? "text-foreground bg-accent/5 dark:bg-accent/10"
+                      : "text-muted hover:text-foreground hover:bg-pill-hover"
+                      }`}
                   >
-                    <Icon size={16} className={isActive ? "text-accent" : "text-muted group-hover:text-foreground"} />
+                    <HugeiconsIcon icon={item.icon} size={16} className={isActive ? "text-accent" : "text-muted group-hover:text-foreground"} />
                     <span className="hidden sm:inline">{item.label}</span>
-                    
+
                     {isActive && (
                       <motion.div
                         layoutId="nav-active"
@@ -133,7 +133,7 @@ export default function Navbar() {
             aria-label="Toggle theme"
             className="p-2 rounded-xl text-muted hover:text-foreground hover:bg-pill-hover transition-all duration-200"
           >
-            {isDark ? <Sun size={18} /> : <Moon size={18} />}
+            {isDark ? <HugeiconsIcon icon={Sun01Icon} size={18} /> : <HugeiconsIcon icon={Moon02Icon} size={18} />}
           </button>
 
           <AnimatePresence>
@@ -146,7 +146,7 @@ export default function Navbar() {
                 aria-label="Scroll to top"
                 className="p-2 rounded-xl text-muted hover:text-foreground hover:bg-pill-hover transition-all duration-200 flex items-center justify-center overflow-hidden"
               >
-                <ArrowUp size={18} />
+                <HugeiconsIcon icon={ArrowUp01Icon} size={18} />
               </motion.button>
             )}
           </AnimatePresence>

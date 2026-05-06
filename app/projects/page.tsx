@@ -1,6 +1,41 @@
-import { ArrowUpRight } from "lucide-react";
+import { HugeiconsIcon } from "@hugeicons/react";
+import {
+  ArrowUpRight01Icon,
+  ReactIcon,
+  Typescript01Icon,
+  CloudIcon,
+  PresentationBarChart01Icon,
+  Robot01Icon,
+  Database01Icon,
+  CreditCardIcon,
+  PythonIcon,
+  ZapIcon,
+  TrendingUp,
+  Money01Icon,
+  Refresh01Icon,
+  Notebook01Icon,
+  AiBrain01Icon
+} from "@hugeicons/core-free-icons";
 import SectionLabel from "@/components/SectionLabel";
 import { siteContent } from "@/data/content";
+
+const techIconMap: Record<string, { icon: any; color: string }> = {
+  "React": { icon: ReactIcon, color: "#61DAFB" },
+  "Typescript": { icon: Typescript01Icon, color: "#3178C6" },
+  "Cloud": { icon: CloudIcon, color: "#00a1ff" },
+  "Analytics": { icon: PresentationBarChart01Icon, color: "#FF9800" },
+  "AI": { icon: Robot01Icon, color: "#8A2BE2" },
+  "Nodejs": { icon: Database01Icon, color: "#8CC84B" },
+  "Database": { icon: Database01Icon, color: "#336791" },
+  "Payments": { icon: CreditCardIcon, color: "#635BFF" },
+  "Python": { icon: PythonIcon, color: "#3776AB" },
+  "FastAPI": { icon: ZapIcon, color: "#009688" },
+  "Finance": { icon: TrendingUp, color: "#4CAF50" },
+  "Money": { icon: Money01Icon, color: "#FFD700" },
+  "Sync": { icon: Refresh01Icon, color: "#00BCD4" },
+  "Learning": { icon: Notebook01Icon, color: "#FFC107" },
+  "Brain": { icon: AiBrain01Icon, color: "#E91E63" }
+};
 
 export const metadata = {
   title: "Projects — Niranjan Gaonkar",
@@ -58,11 +93,12 @@ export default function ProjectsPage() {
                     style={{ color: "var(--foreground)" }}
                   >
                     {project.name}
-                    <ArrowUpRight
+                    <HugeiconsIcon
+                      icon={ArrowUpRight01Icon}
                       size={14}
                       strokeWidth={1.8}
-                      className="opacity-40 group-hover:opacity-100 transition-opacity"
-                      style={{ color: "var(--foreground-muted)" }}
+                      className="opacity-40 group-hover:opacity-100 transition-opacity text-muted"
+                      color="currentColor"
                     />
                   </a>
                   <span className={typeColors[project.type]}>{project.type}</span>
@@ -95,7 +131,11 @@ export default function ProjectsPage() {
                         }}
                         title={icon}
                       >
-                        {icon}
+                        {techIconMap[icon] ? (
+                          <HugeiconsIcon icon={techIconMap[icon].icon} size={14} color={techIconMap[icon].color} />
+                        ) : (
+                          icon
+                        )}
                       </span>
                     ))}
                   </div>
@@ -143,10 +183,9 @@ export default function ProjectsPage() {
                     href={project.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="opacity-40 hover:opacity-100 transition-opacity"
-                    style={{ color: "var(--foreground-muted)" }}
+                    className="opacity-40 hover:opacity-100 transition-opacity text-muted"
                   >
-                    <ArrowUpRight size={13} strokeWidth={1.8} />
+                    <HugeiconsIcon icon={ArrowUpRight01Icon} size={13} strokeWidth={1.8} />
                   </a>
                 </div>
               </div>
