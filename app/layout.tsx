@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: "Niranjan Gaonkar — Software Engineer",
     description:
       "Software Engineer building full-stack applications with Next.js, Node.js, and AI-powered systems.",
-    url: "https://niranjan.dev",
+    url: "https://niranjangaonkar.com",
     siteName: "Niranjan Gaonkar",
     images: [
       {
