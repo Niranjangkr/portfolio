@@ -85,22 +85,31 @@ export default function ProjectsPage() {
               <div className="py-1">
                 {/* Name row */}
                 <div className="flex items-center gap-2 mb-1.5 flex-wrap">
-                  <a
-                    href={project.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-semibold text-base flex items-center gap-1.5 group"
-                    style={{ color: "var(--foreground)" }}
-                  >
-                    {project.name}
-                    <HugeiconsIcon
-                      icon={ArrowUpRight01Icon}
-                      size={14}
-                      strokeWidth={1.8}
-                      className="opacity-40 group-hover:opacity-100 transition-opacity text-muted"
-                      color="currentColor"
-                    />
-                  </a>
+                  {project.href && project.href !== "#" ? (
+                    <a
+                      href={project.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold text-base flex items-center gap-1.5 group"
+                      style={{ color: "var(--foreground)" }}
+                    >
+                      {project.name}
+                      <HugeiconsIcon
+                        icon={ArrowUpRight01Icon}
+                        size={14}
+                        strokeWidth={1.8}
+                        className="opacity-40 group-hover:opacity-100 transition-opacity text-muted"
+                        color="currentColor"
+                      />
+                    </a>
+                  ) : (
+                    <span
+                      className="font-semibold text-base flex items-center gap-1.5"
+                      style={{ color: "var(--foreground)" }}
+                    >
+                      {project.name}
+                    </span>
+                  )}
                   <span className={typeColors[project.type]}>{project.type}</span>
                   <span
                     className="text-xs"
@@ -160,15 +169,24 @@ export default function ProjectsPage() {
             <div key={idx}>
               <div className="flex items-center justify-between py-1 gap-4">
                 {/* Left: name */}
-                <a
-                  href={project.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-medium text-sm flex items-center gap-1.5 group"
-                  style={{ color: "var(--foreground)" }}
-                >
-                  {project.name}
-                </a>
+                {project.href && project.href !== "#" ? (
+                  <a
+                    href={project.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium text-sm flex items-center gap-1.5 group"
+                    style={{ color: "var(--foreground)" }}
+                  >
+                    {project.name}
+                  </a>
+                ) : (
+                  <span
+                    className="font-medium text-sm flex items-center gap-1.5"
+                    style={{ color: "var(--foreground)" }}
+                  >
+                    {project.name}
+                  </span>
+                )}
 
                 {/* Right: type + date + arrow */}
                 <div className="flex items-center gap-2 flex-shrink-0">
@@ -179,14 +197,18 @@ export default function ProjectsPage() {
                   >
                     {project.date}
                   </span>
-                  <a
-                    href={project.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="opacity-40 hover:opacity-100 transition-opacity text-muted"
-                  >
-                    <HugeiconsIcon icon={ArrowUpRight01Icon} size={13} strokeWidth={1.8} />
-                  </a>
+                  {project.href && project.href !== "#" ? (
+                    <a
+                      href={project.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="opacity-40 hover:opacity-100 transition-opacity text-muted flex items-center justify-center"
+                    >
+                      <HugeiconsIcon icon={ArrowUpRight01Icon} size={13} strokeWidth={1.8} />
+                    </a>
+                  ) : (
+                    <div style={{ width: 13, height: 13 }} />
+                  )}
                 </div>
               </div>
 

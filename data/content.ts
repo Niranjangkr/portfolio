@@ -234,7 +234,7 @@ export const siteContent: SiteContent = {
         description:
           "AI-powered learning platform generating structured courses, quizzes, and learning resources dynamically using LLM pipelines, Supabase, and scalable full-stack workflows.",
         techIcons: ["React", "AI", "Learning", "Cloud", "Brain"],
-        href: "https://startupnalanda.com/",
+        href: "#",
       },
     ],
 
