@@ -83,7 +83,7 @@ export const siteContent: SiteContent = {
       {
         segments: [
           {
-            text: "I'm a full-stack engineer focused on building scalable SaaS products, AI-powered workflows, and data-intensive platforms. My work spans frontend systems, backend architecture, analytics pipelines, and cloud infrastructure — usually shipping products end-to-end from idea to production.",
+            text: "I'm a full-stack engineer focused on building scalable SaaS products, AI-powered workflows, and data-intensive platforms. My work spans frontend systems, backend architecture, analytics pipelines, and cloud infrastructure — usually shipping products end-to-end from idea to production. ",
           },
           {
             text: "Currently building at ",
