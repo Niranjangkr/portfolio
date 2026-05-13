@@ -155,10 +155,9 @@ export const siteContent: SiteContent = {
       location: "Bicholim, Goa, India",
       remote: true,
       bullets: [
-        "Led end-to-end development of multiple fintech, analytics, and automation platforms across frontend, backend, infrastructure, and deployment layers using Next.js, FastAPI, PostgreSQL, AWS, and Railway.",
-        "Architected scalable multi-tenant systems integrating Stripe, Razorpay, Salesforce, Zoho, Experian, Azure OpenAI, and Pinecone for payments, analytics, workflow automation, and credit decisioning.",
-        "Built AI-powered analytics platforms with ingestion pipelines for CSV/Excel data, vector search, conversational querying, and real-time dashboards for inventory and receivables workflows.",
-        "Designed production-ready frontend systems with Next.js App Router, React Query, Redux Toolkit, and React Flow while implementing secure auth flows using AWS Cognito with MFA.",
+        "Architected scalable multi-tenant backend systems and event-driven workflows using Node.js, FastAPI, PostgreSQL, MongoDB, SQS, and EventBridge across fintech, analytics, and automation platforms.",
+        "Integrated Stripe, Stripe Connect, Razorpay, Salesforce SOQL, Zoho, Twilio, AWS Cognito, Experian, Azure OpenAI, and Pinecone for payments, CRM analytics, authentication, AI workflows, and operational automation.",
+        "Designed production-grade full-stack systems with secure RBAC APIs, workflow orchestration engines, AI-powered analytics dashboards, AWS infrastructure, and scalable cloud deployments reducing manual operational overhead.",
       ],
     },
     {
@@ -169,10 +168,9 @@ export const siteContent: SiteContent = {
       location: "Remote",
       remote: true,
       bullets: [
-        "Built AI-driven web applications using Next.js, Node.js, and MongoDB, delivering full-stack product features across frontend systems, backend APIs, and database architecture.",
-        "Developed AI chatbots, PDF interaction systems, and retrieval-based workflows using LLM integrations for contextual search and conversational interfaces.",
-        "Engineered modular APIs and automation pipelines supporting dynamic content generation, workflow orchestration, and scalable user-centric platforms.",
-        "Designed admin dashboards and analytics systems for monitoring users, platform activity, AI workflows, and operational insights.",
+        "Built AI-driven full-stack applications using Next.js, Node.js, MongoDB, and LLM integrations, delivering scalable frontend systems, backend APIs, and database architectures.",
+        "Developed AI chatbots, PDF-based knowledge assistants, and retrieval pipelines enabling contextual search, conversational workflows, and dynamic content generation.",
+        "Engineered modular APIs, workflow automation systems, and analytics dashboards supporting operational monitoring and scalable AI-powered platform features.",
       ],
     },
     {
@@ -196,7 +194,7 @@ export const siteContent: SiteContent = {
         type: "site",
         date: "2025 – Present",
         description:
-          "Enterprise receivables automation platform with AI-driven workflows, visual campaign orchestration, MFA-secured authentication, and large-scale analytics dashboards built using Next.js, React Flow, and AWS services.",
+          "Multi-tenant receivables automation platform featuring event-driven campaign orchestration, Stripe Connect billing workflows, AI voice collection agents, QuickBooks/Xero sync pipelines, and scalable Next.js dashboards powered by AWS infrastructure.",
         techIcons: ["React", "Typescript", "Cloud", "Analytics", "AI"],
         href: "https://agilereceivables.com",
       },
@@ -205,25 +203,25 @@ export const siteContent: SiteContent = {
         type: "site",
         date: "2025",
         description:
-          "Full-stack GST services platform with Razorpay payments, Zoho automations, RBAC workflows, and scalable backend systems for compliance tracking and service lifecycle management.",
+          "Multi-tenant GST compliance and filing platform with Razorpay payment automation, Socket.io real-time systems, AWS S3 document workflows, RBAC-secured APIs, and scalable full-stack operational dashboards.",
         techIcons: ["React", "Nodejs", "Database", "Payments", "Cloud"],
         href: "https://gstmanager.com",
       },
       {
-        name: "Kreditfin",
+        name: "Credit Decision",
         type: "site",
         date: "2025",
         description:
           "Credit underwriting and decisioning platform integrating Experian APIs, automated scoring workflows, financial analysis pipelines, and FastAPI-based backend systems for loan processing.",
         techIcons: ["Python", "FastAPI", "Database", "Finance", "Money"],
-        href: "https://kreditfin-frontend.vercel.app/",
+        href: "#",
       },
       {
-        name: "Workweek Analytics",
+        name: "Analytics Platform",
         type: "site",
         date: "2024",
         description:
-          "Sales and revenue analytics platform integrating Salesforce data with real-time dashboards, forecasting systems, SOQL-powered querying, RBAC, and multi-tenant backend architecture.",
+          "Sales analytics and forecasting platform integrating Salesforce CRM through direct SOQL querying with real-time dashboards, quota tracking, leaderboard systems, RBAC-secured multi-tenant APIs, and reporting automation.",
         techIcons: ["React", "Nodejs", "Analytics", "Cloud", "Sync"],
         href: "#",
       },
