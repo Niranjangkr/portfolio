@@ -214,7 +214,7 @@ export const siteContent: SiteContent = {
         description:
           "Credit underwriting and decisioning platform integrating Experian APIs, automated scoring workflows, financial analysis pipelines, and FastAPI-based backend systems for loan processing.",
         techIcons: ["Python", "FastAPI", "Database", "Finance", "Money"],
-        href: "#",
+        href: "https://kreditfin-frontend.vercel.app/",
       },
       {
         name: "Analytics Platform",
@@ -238,10 +238,10 @@ export const siteContent: SiteContent = {
 
     other: [
       {
-        name: "Favcy Navigator",
+        name: "Receivables & Inventory Analytics",
         type: "site",
-        date: "2024",
-        href: "#",
+        date: "2025",
+        href: "https://inventory.cubiktech.com",
       },
       {
         name: "WishFerry",
@@ -250,22 +250,22 @@ export const siteContent: SiteContent = {
         href: "https://wishferry.vercel.app",
       },
       {
-        name: "PitchPerfectAI",
-        type: "site",
-        date: "2024",
-        href: "#",
-      },
-      {
         name: "FavcyHive: AI Workplace Assistant",
         type: "site",
         date: "2024",
         href: "https://favcyhive.vercel.app/",
       },
       {
-        name: "Receivables & Inventory Analytics",
+        name: "Favcy Navigator",
         type: "site",
-        date: "2025",
-        href: "https://inventory.cubiktech.com",
+        date: "2024",
+        href: "#",
+      },
+      {
+        name: "PitchPerfectAI",
+        type: "site",
+        date: "2024",
+        href: "#",
       },
       {
         name: "Clappety",
